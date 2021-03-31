@@ -37,6 +37,13 @@ def handle_hello():
         "msg": "Hello, this is your GET /user response "
     }
 
+@app.route('/user', methods=['POST'])
+def handle_hello_post():
+
+    response_body = {
+        "msg": "Hello, this is your POST /user response "
+    }
+
     return jsonify(response_body), 200
 
 # this only runs if `$ python src/main.py` is executed
